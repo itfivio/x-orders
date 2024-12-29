@@ -82,6 +82,46 @@ return [
             ]) : [],
         ],
 
+        'hurt' => [
+            'driver' => 'mysql',
+            'url' => env('DB_HURT_URL'),
+            'host' => env('DB_HURT_HOST', '127.0.0.1'),
+            'port' => env('DB_HURT_PORT', '3306'),
+            'database' => env('DB_HURT_DATABASE', 'laravel'),
+            'username' => env('DB_HURT_USERNAME', 'root'),
+            'password' => env('DB_HURT_PASSWORD', ''),
+            'unix_socket' => env('DB_HURT_SOCKET', ''),
+            'charset' => env('DB_HURT_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_HURT_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+        'sellasist' => [
+            'driver' => 'mysql',
+            'url' => env('DB_SELLASIST_URL'),
+            'host' => env('DB_SELLASIST_HOST', '127.0.0.1'),
+            'port' => env('DB_SELLASIST_PORT', '3306'),
+            'database' => env('DB_SELLASIST_DATABASE', 'laravel'),
+            'username' => env('DB_SELLASIST_USERNAME', 'root'),
+            'password' => env('DB_SELLASIST_PASSWORD', ''),
+            'unix_socket' => env('DB_SELLASIST_SOCKET', ''),
+            'charset' => env('DB_SELLASIST_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_SELLASIST_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
